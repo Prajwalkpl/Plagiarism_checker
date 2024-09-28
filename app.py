@@ -8,10 +8,8 @@ app = Flask(__name__)
 # Preprocessing function
 def preprocess_text(text):
     text = text.lower()
-    # Add other preprocessing like removing punctuation if necessary
     return text
 
-# Function to calculate similarity between two texts using TF-IDF and cosine similarity
 def calculate_similarity(text1, text2):
     vectorizer = TfidfVectorizer().fit_transform([text1, text2])
     vectors = vectorizer.toarray()
