@@ -5,7 +5,7 @@ import os
 
 app = Flask(__name__)
 
-# Preprocessing function
+
 def preprocess_text(text):
     text = text.lower()
     return text
