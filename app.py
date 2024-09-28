@@ -25,12 +25,10 @@ def check_plagiarism():
     if request.method == 'POST':
         text1 = request.form['text1']
         text2 = request.form['text2']
-        
-        # Preprocess the texts
+
         text1 = preprocess_text(text1)
         text2 = preprocess_text(text2)
-        
-        # Calculate similarity
+  
         similarity_score = calculate_similarity(text1, text2)
         f="Not plagiarized code"
         if similarity_score>0.8:
